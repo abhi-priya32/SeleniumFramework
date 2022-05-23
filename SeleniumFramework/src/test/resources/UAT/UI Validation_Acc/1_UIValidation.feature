@@ -9,7 +9,7 @@ Feature: UI Validation Part
       | Address Code Ean: |
       | Valid From:       |
       | Valid Until:      |
-    Then Validate for "Visiting Address" grid following lebels are getting populated
+    Then Validate for "Visiting Address" grid following lebels are getting populated  
       | Street:              |
       | House Number:        |
       | House Number Suffix: |
