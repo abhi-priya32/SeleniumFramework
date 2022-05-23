@@ -1,0 +1,364 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "responseCode": {
+      "type": "string"
+    },
+    "responseDescription": {
+      "type": "string"
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "storeNumber": {
+          "type": "integer"
+        },
+        "createdAt": {
+          "type": "string"
+        },
+        "updatedAt": {
+          "type": "string"
+        },
+        "storeVersionPeriods": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "addressCodeEan": {
+                  "type": "integer"
+                },
+                "dateValidFrom": {
+                  "type": "string"
+                },
+                "dateValidUntil": {
+                  "type": "string"
+                },
+                "deliveryAddress": {
+                  "type": "object",
+                  "properties": {
+                    "city": {
+                      "type": "string"
+                    },
+                    "country": {
+                      "type": "string"
+                    },
+                    "houseNumber": {
+                      "type": "integer"
+                    },
+                    "postalCode": {
+                      "type": "string"
+                    },
+                    "street": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "city",
+                    "country",
+                    "houseNumber",
+                    "postalCode",
+                    "street"
+                  ]
+                },
+                "poBoxAddress": {
+                  "type": "object",
+                  "properties": {
+                    "city": {
+                      "type": "string"
+                    },
+                    "country": {
+                      "type": "string"
+                    },
+                    "poBoxNumber": {
+                      "type": "integer"
+                    },
+                    "postalCode": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "city",
+                    "country",
+                    "poBoxNumber",
+                    "postalCode"
+                  ]
+                },
+                "visitingAddress": {
+                  "type": "object",
+                  "properties": {
+                    "city": {
+                      "type": "string"
+                    },
+                    "country": {
+                      "type": "string"
+                    },
+                    "houseNumber": {
+                      "type": "integer"
+                    },
+                    "postalCode": {
+                      "type": "string"
+                    },
+                    "street": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "city",
+                    "country",
+                    "houseNumber",
+                    "postalCode",
+                    "street"
+                  ]
+                }
+              },
+              "required": [
+                "addressCodeEan",
+                "dateValidFrom",
+                "dateValidUntil",
+                "deliveryAddress",
+                "poBoxAddress",
+                "visitingAddress"
+              ]
+            }
+          ]
+        },
+        "openingHours": {
+          "type": "object",
+          "properties": {
+            "link": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "link"
+          ]
+        },
+        "storeGroupMembershipPeriods": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "dateValidFrom": {
+                  "type": "string"
+                },
+                "storeGroup": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "link": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "link",
+                    "name"
+                  ]
+                },
+                "storeGrouping": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "link": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "link",
+                    "name"
+                  ]
+                }
+              },
+              "required": [
+                "dateValidFrom",
+                "storeGroup",
+                "storeGrouping"
+              ]
+            }
+          ]
+        },
+        "storeOrgMembershipPeriods": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "dateValidFrom": {
+                  "type": "string"
+                },
+                "franchiseFlag": {
+                  "type": "boolean"
+                },
+                "operationalCluster": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "link": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "link",
+                    "name"
+                  ]
+                },
+                "storeRegion": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "link": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "link",
+                    "name"
+                  ]
+                }
+              },
+              "required": [
+                "dateValidFrom",
+                "franchiseFlag",
+                "operationalCluster",
+                "storeRegion"
+              ]
+            }
+          ]
+        },
+        "temporaryClosurePeriods": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "dateTimeClosedFrom": {
+                  "type": "string"
+                },
+                "dateTimeClosedUntil": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "reason": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "dateTimeClosedFrom",
+                "dateTimeClosedUntil",
+                "description",
+                "reason"
+              ]
+            }
+          ]
+        },
+        "storeParameters": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "newValue": {
+                  "type": "string"
+                },
+                "newValueValidFrom": {
+                  "type": "string"
+                },
+                "parameter": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name"
+                  ]
+                }
+              },
+              "required": [
+                "newValue",
+                "newValueValidFrom",
+                "parameter"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "parameter": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name"
+                  ]
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "parameter",
+                "value"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "storeNumber",
+        "createdAt",
+        "updatedAt",
+        "storeVersionPeriods",
+        "openingHours",
+        "storeGroupMembershipPeriods",
+        "storeOrgMembershipPeriods",
+        "temporaryClosurePeriods",
+        "storeParameters"
+      ]
+    }
+  },
+  "required": [
+    "responseCode",
+    "responseDescription",
+    "response"
+  ]
+}
